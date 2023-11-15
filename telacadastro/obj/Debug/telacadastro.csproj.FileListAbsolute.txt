@@ -9,3 +9,4 @@ C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.Co
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.exe
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.pdb
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Form2.resources
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Forms.Form3.resources

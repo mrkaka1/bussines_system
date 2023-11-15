@@ -7,33 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using telacadastro.Forms;
 
-namespace telacadastro
+namespace telacadastro.Forms
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.ShowDialog();
-         
         }
     }
 }
