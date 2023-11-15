@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace telacadastro 
@@ -67,6 +68,21 @@ namespace telacadastro
 
             return false;
 
+        }
+
+        public static bool Email(string email)
+        {
+            // Define uma expressão regular para validar endereços de e-mail
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Cria um objeto Regex com a expressão regular
+            Regex regex = new Regex(pattern);
+
+            // Usa o método Match para verificar se o e-mail corresponde à expressão regular
+            Match match = regex.Match(email);
+
+            // Retorna verdadeiro se houver correspondência, falso caso contrário
+            return match.Success;
         }
     }
 }

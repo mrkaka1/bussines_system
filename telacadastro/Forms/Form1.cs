@@ -45,7 +45,7 @@ namespace telacadastro
                 string endereco = txt_end.Text;
                 string cargo = cmb_cargo.Text;
                 string estado = txt_estado.Text;
-                string estadoCivil = txt_estadocivil.Text;
+                string estadoCivil = cbm_estadocivil.Text;
                 string salario = txt_salario.Text;
                 string cidade = txt_cidd.Text;
                 string telefone = txt_telefone.Text;
@@ -60,13 +60,31 @@ namespace telacadastro
                     Validador.CPF(cpf);
                     bool valido = Validador.CPF(cpf.ToString());
 
-                    if (valido == true)
+                    Validador.Email(email);
+                    bool validoem = Validador.Email(email.ToString());
+
+                    if (valido == true && validoem == true )
                     {
-                        MessageBox.Show($"O CPF é válido!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_nome.Clear();
+                        mtx_cpf.Clear();
+                        txt_rg.Clear();
+                        txt_email.Clear();
+                        txt_id.Clear();
+                        txt_telefone.Clear();
+                        txt_end.Clear();
+                        cmb_cargo.Text = "";
+                        cbm_estadocivil.Text = "";
+                        dtp_nasci.Text = "";
+                        txt_cidd.Clear();
+                        txt_salario.Clear();
+
+
+
+                        MessageBox.Show($"O CPF e o EMAIL são válidos!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("CPF inválido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("CPF/Email são inválidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else { MessageBox.Show("Todos os campos são obrigatórios para ser preenchidos", "Erro", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); }

@@ -41,7 +41,6 @@
             this.txt_telefone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_estadocivil = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_salario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dtp_nasci = new System.Windows.Forms.DateTimePicker();
             this.cmb_cargo = new System.Windows.Forms.ComboBox();
+            this.cbm_estadocivil = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txt_id
@@ -174,18 +174,11 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Função/Cargo";
             // 
-            // txt_estadocivil
-            // 
-            this.txt_estadocivil.Location = new System.Drawing.Point(179, 539);
-            this.txt_estadocivil.Name = "txt_estadocivil";
-            this.txt_estadocivil.Size = new System.Drawing.Size(137, 22);
-            this.txt_estadocivil.TabIndex = 17;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(176, 506);
+            this.label10.Location = new System.Drawing.Point(176, 512);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 30);
             this.label10.TabIndex = 16;
@@ -325,12 +318,27 @@
             this.cmb_cargo.Size = new System.Drawing.Size(180, 24);
             this.cmb_cargo.TabIndex = 33;
             // 
+            // cbm_estadocivil
+            // 
+            this.cbm_estadocivil.FormattingEnabled = true;
+            this.cbm_estadocivil.Items.AddRange(new object[] {
+            "Casado",
+            "Solteiro",
+            "Divorciado",
+            "Viúvo",
+            "Nenhum"});
+            this.cbm_estadocivil.Location = new System.Drawing.Point(180, 545);
+            this.cbm_estadocivil.Name = "cbm_estadocivil";
+            this.cbm_estadocivil.Size = new System.Drawing.Size(180, 24);
+            this.cbm_estadocivil.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(748, 801);
+            this.Controls.Add(this.cbm_estadocivil);
             this.Controls.Add(this.cmb_cargo);
             this.Controls.Add(this.dtp_nasci);
             this.Controls.Add(this.txt_cidd);
@@ -346,7 +354,6 @@
             this.Controls.Add(this.txt_salario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_estadocivil);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_end);
             this.Controls.Add(this.label7);
@@ -383,7 +390,6 @@
         private System.Windows.Forms.TextBox txt_telefone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_estadocivil;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_salario;
         private System.Windows.Forms.Label label11;
@@ -399,6 +405,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dtp_nasci;
         private System.Windows.Forms.ComboBox cmb_cargo;
+        private System.Windows.Forms.ComboBox cbm_estadocivil;
     }
 }
 
