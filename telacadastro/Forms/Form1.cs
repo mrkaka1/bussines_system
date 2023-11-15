@@ -77,7 +77,7 @@ namespace telacadastro
                         dtp_nasci.Text = "";
                         txt_cidd.Clear();
                         txt_salario.Clear();
-
+                        txt_estado.Clear();
 
 
                         MessageBox.Show($"O CPF e o EMAIL são válidos!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Warning);

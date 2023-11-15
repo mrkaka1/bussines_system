@@ -72,17 +72,13 @@ namespace telacadastro
 
         public static bool Email(string email)
         {
-            // Define uma expressão regular para validar endereços de e-mail
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            string cdgEmail = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 
-            // Cria um objeto Regex com a expressão regular
-            Regex regex = new Regex(pattern);
+            Regex regex = new Regex(cdgEmail);
 
-            // Usa o método Match para verificar se o e-mail corresponde à expressão regular
-            Match match = regex.Match(email);
+            Match comparaEmail = regex.Match(email);
 
-            // Retorna verdadeiro se houver correspondência, falso caso contrário
-            return match.Success;
+            return comparaEmail.Success;
         }
     }
 }
