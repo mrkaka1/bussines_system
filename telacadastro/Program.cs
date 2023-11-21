@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using telacadastro.Forms;
 
 namespace telacadastro
 {
@@ -16,7 +17,7 @@ namespace telacadastro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new Initial());
         }
     }
 }

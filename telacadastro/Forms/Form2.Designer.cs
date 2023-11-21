@@ -28,56 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dgv_Func = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Func)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaShell;
-            this.button1.Location = new System.Drawing.Point(483, 178);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(739, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 64);
+            this.button1.Size = new System.Drawing.Size(49, 38);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Fazer Cadastro Funcionário";
+            this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // dgv_Func
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaShell;
-            this.button2.Location = new System.Drawing.Point(235, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ver Funcionários Cadastrados";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(648, 374);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 64);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Fechar Programa";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.dgv_Func.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Func.Location = new System.Drawing.Point(12, 69);
+            this.dgv_Func.Name = "dgv_Func";
+            this.dgv_Func.RowHeadersWidth = 51;
+            this.dgv_Func.RowTemplate.Height = 24;
+            this.dgv_Func.Size = new System.Drawing.Size(776, 369);
+            this.dgv_Func.TabIndex = 5;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dgv_Func);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Func)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,7 +78,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dgv_Func;
     }
 }

@@ -54,14 +54,16 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txt_estado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtp_nasci = new System.Windows.Forms.DateTimePicker();
             this.cmb_cargo = new System.Windows.Forms.ComboBox();
             this.cbm_estadocivil = new System.Windows.Forms.ComboBox();
+            this.dtp_nasci = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(535, 148);
+            this.txt_id.MaxLength = 5;
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(56, 22);
             this.txt_id.TabIndex = 3;
@@ -99,6 +101,7 @@
             // txt_rg
             // 
             this.txt_rg.Location = new System.Drawing.Point(180, 308);
+            this.txt_rg.MaxLength = 7;
             this.txt_rg.Name = "txt_rg";
             this.txt_rg.Size = new System.Drawing.Size(114, 22);
             this.txt_rg.TabIndex = 9;
@@ -150,6 +153,7 @@
             // txt_telefone
             // 
             this.txt_telefone.Location = new System.Drawing.Point(180, 384);
+            this.txt_telefone.MaxLength = 15;
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(125, 22);
             this.txt_telefone.TabIndex = 13;
@@ -298,13 +302,6 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "Estado";
             // 
-            // dtp_nasci
-            // 
-            this.dtp_nasci.Location = new System.Drawing.Point(179, 232);
-            this.dtp_nasci.Name = "dtp_nasci";
-            this.dtp_nasci.Size = new System.Drawing.Size(200, 22);
-            this.dtp_nasci.TabIndex = 32;
-            // 
             // cmb_cargo
             // 
             this.cmb_cargo.FormattingEnabled = true;
@@ -332,15 +329,23 @@
             this.cbm_estadocivil.Size = new System.Drawing.Size(180, 24);
             this.cbm_estadocivil.TabIndex = 34;
             // 
+            // dtp_nasci
+            // 
+            this.dtp_nasci.Location = new System.Drawing.Point(179, 232);
+            this.dtp_nasci.Name = "dtp_nasci";
+            this.dtp_nasci.Size = new System.Drawing.Size(162, 22);
+            this.dtp_nasci.TabIndex = 35;
+            this.dtp_nasci.Text = "AAAA-MM-DD";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(748, 801);
+            this.Controls.Add(this.dtp_nasci);
             this.Controls.Add(this.cbm_estadocivil);
             this.Controls.Add(this.cmb_cargo);
-            this.Controls.Add(this.dtp_nasci);
             this.Controls.Add(this.txt_cidd);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txt_estado);
@@ -403,9 +408,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtp_nasci;
         private System.Windows.Forms.ComboBox cmb_cargo;
         private System.Windows.Forms.ComboBox cbm_estadocivil;
+        private System.Windows.Forms.TextBox dtp_nasci;
     }
 }
 
