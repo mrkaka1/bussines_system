@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empresa));
             this.tx_razao_social = new System.Windows.Forms.TextBox();
             this.cmb_natureza = new System.Windows.Forms.ComboBox();
             this.txt_cidd = new System.Windows.Forms.TextBox();
@@ -604,6 +605,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Empresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresa";
