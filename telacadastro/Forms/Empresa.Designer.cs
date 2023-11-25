@@ -50,11 +50,9 @@
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_situation_cad = new System.Windows.Forms.ComboBox();
-            this.tx_telefone = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.tx_cpfpro = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tx_nomepropri = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -74,6 +72,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.tx_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.tx_cpfpro = new System.Windows.Forms.MaskedTextBox();
             this.panelPorte.SuspendLayout();
             this.panelTipo.SuspendLayout();
             this.panelRegime.SuspendLayout();
@@ -294,13 +294,6 @@
             this.cmb_situation_cad.Size = new System.Drawing.Size(192, 24);
             this.cmb_situation_cad.TabIndex = 65;
             // 
-            // tx_telefone
-            // 
-            this.tx_telefone.Location = new System.Drawing.Point(32, 566);
-            this.tx_telefone.Name = "tx_telefone";
-            this.tx_telefone.Size = new System.Drawing.Size(206, 22);
-            this.tx_telefone.TabIndex = 70;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -356,13 +349,6 @@
             this.label17.Size = new System.Drawing.Size(167, 30);
             this.label17.TabIndex = 75;
             this.label17.Text = "Porte da Empresa";
-            // 
-            // tx_cpfpro
-            // 
-            this.tx_cpfpro.Location = new System.Drawing.Point(335, 674);
-            this.tx_cpfpro.Name = "tx_cpfpro";
-            this.tx_cpfpro.Size = new System.Drawing.Size(180, 22);
-            this.tx_cpfpro.TabIndex = 83;
             // 
             // label18
             // 
@@ -560,23 +546,39 @@
             this.radioButton3.Text = "Real";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // tx_telefone
+            // 
+            this.tx_telefone.Location = new System.Drawing.Point(31, 566);
+            this.tx_telefone.Mask = "(00) 00000-0000";
+            this.tx_telefone.Name = "tx_telefone";
+            this.tx_telefone.Size = new System.Drawing.Size(169, 22);
+            this.tx_telefone.TabIndex = 90;
+            // 
+            // tx_cpfpro
+            // 
+            this.tx_cpfpro.Location = new System.Drawing.Point(335, 674);
+            this.tx_cpfpro.Mask = "000,000,000-00";
+            this.tx_cpfpro.Name = "tx_cpfpro";
+            this.tx_cpfpro.Size = new System.Drawing.Size(190, 22);
+            this.tx_cpfpro.TabIndex = 91;
+            // 
             // Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(994, 822);
+            this.Controls.Add(this.tx_cpfpro);
+            this.Controls.Add(this.tx_telefone);
             this.Controls.Add(this.panelPorte);
             this.Controls.Add(this.panelTipo);
             this.Controls.Add(this.panelRegime);
             this.Controls.Add(this.dtp_data);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.tx_cpfpro);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.tx_nomepropri);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.cmb_estado);
-            this.Controls.Add(this.tx_telefone);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.cmb_situation_cad);
             this.Controls.Add(this.tx_razao_social);
@@ -640,11 +642,9 @@
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_situation_cad;
-        private System.Windows.Forms.TextBox tx_telefone;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmb_estado;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox tx_cpfpro;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox tx_nomepropri;
         private System.Windows.Forms.Label label20;
@@ -664,5 +664,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.MaskedTextBox tx_telefone;
+        private System.Windows.Forms.MaskedTextBox tx_cpfpro;
     }
 }

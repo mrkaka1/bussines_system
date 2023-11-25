@@ -42,32 +42,39 @@ namespace telacadastro.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             try {
-                if (Cnpj.Validar(mtx_cnpj.Text) == true)
+
+                if (CamposValidos() == true)
                 {
-                    Empresas empresa = new Empresas();
-                    empresa.NomeFantasia = txt_nome_fanta.Text;
-                    empresa.RazaoSocial = tx_razao_social.Text;
-                    empresa.CNPJ = mtx_cnpj.Text;
-                    empresa.ValorMonetario = Convert.ToDouble(txt_valormoneta.Text);
-                    empresa.NaturezaJuridica = cmb_natureza.Text;
-                    empresa.DataInicioAtividade = dtp_data.Text;
-                    empresa.NomeProprietario = tx_nomepropri.Text;
-                    empresa.Cidade = txt_cidd.Text;
-                    empresa.Estado = cmb_estado.Text;
-                    empresa.SituacaoCadastral = cmb_situation_cad.Text;
-                    empresa.Telefone = tx_telefone.Text;
-                    empresa.Endereco = txt_end.Text;
-                    empresa.RegimeTributario = RadioRegime();
-                    empresa.Tipo = RadioType();
-                    empresa.PorteEmpresa = RadioPorte();
-                    empresa.NomeProprietario = tx_nomepropri.Text;
-                    empresa.CPF = tx_cpfpro.Text;
+                    if (Cnpj.Validar(mtx_cnpj.Text) == true && Validador.CPF(tx_cpfpro.Text))
+                    {
+                        Empresas empresa = new Empresas();
+                        empresa.NomeFantasia = txt_nome_fanta.Text;
+                        empresa.RazaoSocial = tx_razao_social.Text;
+                        empresa.CNPJ = mtx_cnpj.Text;
+                        empresa.ValorMonetario = Convert.ToDouble(txt_valormoneta.Text);
+                        empresa.NaturezaJuridica = cmb_natureza.Text;
+                        empresa.DataInicioAtividade = dtp_data.Text;
+                        empresa.NomeProprietario = tx_nomepropri.Text;
+                        empresa.Cidade = txt_cidd.Text;
+                        empresa.Estado = cmb_estado.Text;
+                        empresa.SituacaoCadastral = cmb_situation_cad.Text;
+                        empresa.Telefone = tx_telefone.Text;
+                        empresa.Endereco = txt_end.Text;
+                        empresa.RegimeTributario = RadioRegime();
+                        empresa.Tipo = RadioType();
+                        empresa.PorteEmpresa = RadioPorte();
+                        empresa.NomeProprietario = tx_nomepropri.Text;
+                        empresa.CPF = tx_cpfpro.Text;
 
-                    Inserir(empresa);
+                        Inserir(empresa);
 
-                    LimparCampos();
-                }
-
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("CNPJ / CPF são inválidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }    
             }
             catch
             {
@@ -161,6 +168,40 @@ namespace telacadastro.Forms
             {
                 throw ex;
             }
+        }
+        private bool CamposValidos()
+        {
+            if (string.IsNullOrWhiteSpace(txt_nome_fanta.Text) ||
+                string.IsNullOrWhiteSpace(tx_razao_social.Text) ||
+                string.IsNullOrWhiteSpace(mtx_cnpj.Text) ||
+                string.IsNullOrWhiteSpace(txt_valormoneta.Text) ||
+                string.IsNullOrWhiteSpace(cmb_natureza.Text) ||
+                string.IsNullOrWhiteSpace(dtp_data.Text) ||
+                string.IsNullOrWhiteSpace(tx_nomepropri.Text) ||
+                string.IsNullOrWhiteSpace(cmb_estado.Text) ||
+                string.IsNullOrWhiteSpace(cmb_situation_cad.Text) ||
+                string.IsNullOrWhiteSpace(tx_nomepropri.Text) ||
+                string.IsNullOrWhiteSpace(tx_cpfpro.Text) ||
+                !RadioButtonsSelecionados(panelRegime) ||
+                !RadioButtonsSelecionados(panelTipo) ||
+                !RadioButtonsSelecionados(panelPorte))
+            {
+                MessageBox.Show("Preencha todos os campos antes de prosseguir.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
+        private bool RadioButtonsSelecionados(Panel panel)
+        {
+            foreach (Control ctrl in panel.Controls)
+            {
+                if (ctrl is RadioButton rb && rb.Checked)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         private void LimparCampos()
         {
