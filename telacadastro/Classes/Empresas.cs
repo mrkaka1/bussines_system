@@ -15,21 +15,22 @@ namespace telacadastro
         public string RazaoSocial { get; set; }
         public string SituacaoCadastral { get; set; }
         public string RegimeTributario { get; set; }
-        public string CapitalSocial { get; set; }
+        public double ValorMonetario { get; set; }
         public string Telefone { get; set; }
         public string Estado { get; set; }
+        public string Endereco { get; set; }
+        public string Cidade { get; set; }
         public string Tipo { get; set; }
         public string PorteEmpresa { get; set; }
         public string NaturezaJuridica { get; set; }
         public string NomeProprietario { get; set; }
         public string CPF { get; set; }
-
         public Empresas()
         {
 
         }
 
-        public Empresas(int id, string nomeFantasia, string dataInicioAtividade, string cNPJ, string razaoSocial, string situacaoCadastral, string regimeTributario, string capitalSocial, string telefone, string estado, string tipo, string porteEmpresa, string naturezaJuridica, string nomeProprietario, string cPF)
+        public Empresas(int id, string nomeFantasia, string dataInicioAtividade, string cNPJ, string razaoSocial, string situacaoCadastral, string regimeTributario, double valormonetario, string telefone, string estado, string tipo, string porteEmpresa, string naturezaJuridica, string nomeProprietario, string cPF)
         {
             this.Id = id;
             this.NomeFantasia = nomeFantasia;
@@ -38,7 +39,7 @@ namespace telacadastro
             this.RazaoSocial = razaoSocial;
             this.SituacaoCadastral = situacaoCadastral;
             this.RegimeTributario = regimeTributario;
-            this.CapitalSocial = capitalSocial;
+            this.ValorMonetario = valormonetario;
             this.Telefone = telefone;
             this.Estado = estado;
             this.Tipo = tipo;

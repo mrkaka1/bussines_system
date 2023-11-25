@@ -7,7 +7,6 @@ C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.Ge
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.CoreCompileInputs.cache
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.exe
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.pdb
-C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Form2.resources
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\Google.Protobuf.dll
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\K4os.Compression.LZ4.dll
@@ -45,3 +44,5 @@ C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Forms.Emp
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Funcionario.resources
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.CadFuncionario.resources
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\Library.dll
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Forms.ConsultarEmp.resources
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.ConsultarFunc.resources

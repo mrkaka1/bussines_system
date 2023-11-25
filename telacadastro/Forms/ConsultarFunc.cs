@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using telacadastro.Conexão;
+using telacadastro.Forms;
 using telacadastro.Uteis;
 
 
 namespace telacadastro
 {
-    public partial class Form2 : Form
+    public partial class ConsultarFunc : Form
     {
         private List<Funcionario> listaFuncionarios = new List<Funcionario>();
-        public Form2()
+        public ConsultarFunc()
         {
             InitializeComponent();
             Consultar();
@@ -41,7 +42,7 @@ namespace telacadastro
                 {
                     Funcionario funcionario = new Funcionario();
                     funcionario.Id = leitor.GetInt32("id_Fun");
-                    funcionario.Nome = DAOHelper.GetString(leitor,"nome_Fun");
+                    funcionario.Nome = DAOHelper.GetString(leitor, "nome_Fun");
                     funcionario.DataNascimento = DAOHelper.GetString(leitor, "data_nas_Fun");
                     funcionario.Cpf = DAOHelper.GetString(leitor, "cpf_Fun");
                     funcionario.Rg = DAOHelper.GetString(leitor, "rg_Fun");
@@ -52,8 +53,8 @@ namespace telacadastro
                     funcionario.Estado = DAOHelper.GetString(leitor, "estado_Fun");
                     funcionario.Estado_Civil = DAOHelper.GetString(leitor, "estado_civil_Fun");
                     funcionario.Funcao_Cargo = DAOHelper.GetString(leitor, "funcao_Fun");
-                    funcionario.Salario = DAOHelper.GetDouble(leitor,"salario_Fun");
-                                
+                    funcionario.Salario = DAOHelper.GetDouble(leitor, "salario_Fun");
+
                     listaFuncionarios.Add(funcionario);
                 }
 
@@ -80,6 +81,21 @@ namespace telacadastro
         private void dgv_Func_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void AtualizarDataGridView()
+        {
+            listaFuncionarios.Clear();
+
+            Consultar();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AtualizarDataGridView();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

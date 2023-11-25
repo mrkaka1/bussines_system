@@ -24,14 +24,14 @@ namespace telacadastro.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 fr = new Form2();
+            ConsultarFunc fr = new ConsultarFunc();
             fr.ShowDialog();
             this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Empresa ep = new Empresa();
+            ConsultarEmp ep = new ConsultarEmp();
             ep.ShowDialog();
         }
     }
