@@ -41,7 +41,9 @@ namespace telacadastro
                 while (leitor.Read())
                 {
                     Funcionario funcionario = new Funcionario();
+
                     funcionario.Id = leitor.GetInt32("id_Fun");
+
                     funcionario.Nome = DAOHelper.GetString(leitor, "nome_Fun");
                     funcionario.DataNascimento = DAOHelper.GetString(leitor, "data_nas_Fun");
                     funcionario.Cpf = DAOHelper.GetString(leitor, "cpf_Fun");

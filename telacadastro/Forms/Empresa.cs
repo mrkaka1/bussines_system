@@ -211,9 +211,13 @@ namespace telacadastro.Forms
             txt_valormoneta.Text = "";
             cmb_natureza.Text = "";
             dtp_data.Text = "";
+            txt_end.Text = "";
+            txt_cidd.Text = "";
             tx_nomepropri.Text = "";
             cmb_estado.Text = "";
             cmb_situation_cad.Text = "";
+            tx_telefone.Text = "";
+
 
             LimparRb(panelRegime);
             LimparRb(panelTipo);

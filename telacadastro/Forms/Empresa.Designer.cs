@@ -90,10 +90,11 @@
             // 
             this.cmb_natureza.FormattingEnabled = true;
             this.cmb_natureza.Items.AddRange(new object[] {
-            "Médico",
-            "Programador",
-            "Professor",
-            "Nenhum"});
+            "EI - Empresário Individual",
+            "MEI - Microempreendedor Individual",
+            "SA - Sociedade Anônima",
+            "SSL - Sociedade Simples Limitada",
+            "SLP - Sociedade Limitada Pessoal"});
             this.cmb_natureza.Location = new System.Drawing.Point(376, 566);
             this.cmb_natureza.Name = "cmb_natureza";
             this.cmb_natureza.Size = new System.Drawing.Size(180, 24);
