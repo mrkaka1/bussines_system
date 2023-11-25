@@ -1,6 +1,6 @@
 ﻿namespace telacadastro
 {
-    partial class Form1
+    partial class CadFuncionario
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadFuncionario));
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -261,7 +262,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(148, 9);
+            this.label12.Location = new System.Drawing.Point(170, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(443, 65);
             this.label12.TabIndex = 27;
@@ -337,7 +338,7 @@
             this.dtp_nasci.TabIndex = 35;
             this.dtp_nasci.Text = "AAAA-MM-DD";
             // 
-            // Form1
+            // CadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -372,9 +373,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "CadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

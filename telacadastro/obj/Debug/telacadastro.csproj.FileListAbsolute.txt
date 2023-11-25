@@ -2,7 +2,6 @@ C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\telacadastro.exe.confi
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\telacadastro.exe
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\telacadastro.pdb
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.AssemblyReference.cache
-C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Form1.resources
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Properties.Resources.resources
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.GenerateResource.cache
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.CoreCompileInputs.cache
@@ -42,3 +41,7 @@ C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\System.Runtime.Compile
 C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.csproj.CopyComplete
 C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Forms.Initial.resources
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Forms.Empresa.resources
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.Funcionario.resources
+C:\Users\daluz\source\telacadastro\telacadastro\obj\Debug\telacadastro.CadFuncionario.resources
+C:\Users\daluz\source\telacadastro\telacadastro\bin\Debug\Library.dll

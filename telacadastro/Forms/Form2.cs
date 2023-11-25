@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using telacadastro.Conexão;
+using telacadastro.Uteis;
 
 
 namespace telacadastro
@@ -23,8 +24,7 @@ namespace telacadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            this.Close();
+            CadFuncionario form1 = new CadFuncionario();
             form1.ShowDialog();
         }
         public void Consultar()
@@ -41,26 +41,19 @@ namespace telacadastro
                 {
                     Funcionario funcionario = new Funcionario();
                     funcionario.Id = leitor.GetInt32("id_Fun");
-                    funcionario.Nome = leitor.GetString("nome_Fun");
-                    funcionario.DataNascimento = leitor.GetString("data_nas_Fun");
-                    funcionario.Cpf = leitor.GetString("cpf_Fun");
-                    funcionario.Rg = leitor.GetString("rg_Fun");
-                    funcionario.Telefone = leitor.GetString("telefone_Fun");
-                    funcionario.Email = leitor.GetString("email_Fun");
-                    funcionario.Endereco = leitor.GetString("endereco_Fun");
-                    funcionario.Cidade = leitor.GetString("cidade_Fun");
-                    funcionario.Estado = leitor.GetString("estado_Fun");
-                    funcionario.Estado_Civil = leitor.GetString("estado_civil_Fun");
-                    funcionario.Funcao_Cargo = leitor.GetString("funcao_Fun");
-                    funcionario.Salario = leitor.GetDouble("salario_Fun");
-
-                    var posicaoColuna = leitor.GetOrdinal("cpf_Fun");
-
-                    if (!leitor.IsDBNull(posicaoColuna))
-                    {
-                        funcionario.Cpf = leitor.GetString("cpf_Fun");
-                    }
-
+                    funcionario.Nome = DAOHelper.GetString(leitor,"nome_Fun");
+                    funcionario.DataNascimento = DAOHelper.GetString(leitor, "data_nas_Fun");
+                    funcionario.Cpf = DAOHelper.GetString(leitor, "cpf_Fun");
+                    funcionario.Rg = DAOHelper.GetString(leitor, "rg_Fun");
+                    funcionario.Telefone = DAOHelper.GetString(leitor, "telefone_Fun");
+                    funcionario.Email = DAOHelper.GetString(leitor, "email_Fun");
+                    funcionario.Endereco = DAOHelper.GetString(leitor, "endereco_Fun");
+                    funcionario.Cidade = DAOHelper.GetString(leitor, "cidade_Fun");
+                    funcionario.Estado = DAOHelper.GetString(leitor, "estado_Fun");
+                    funcionario.Estado_Civil = DAOHelper.GetString(leitor, "estado_civil_Fun");
+                    funcionario.Funcao_Cargo = DAOHelper.GetString(leitor, "funcao_Fun");
+                    funcionario.Salario = DAOHelper.GetDouble(leitor,"salario_Fun");
+                                
                     listaFuncionarios.Add(funcionario);
                 }
 
@@ -79,6 +72,14 @@ namespace telacadastro
             this.Dispose();
         }
 
-       
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_Func_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

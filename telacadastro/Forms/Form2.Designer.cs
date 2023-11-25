@@ -57,6 +57,7 @@
             this.dgv_Func.RowTemplate.Height = 24;
             this.dgv_Func.Size = new System.Drawing.Size(776, 369);
             this.dgv_Func.TabIndex = 5;
+            this.dgv_Func.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Func_CellContentClick);
             // 
             // Form2
             // 
@@ -70,6 +71,7 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Func)).EndInit();
             this.ResumeLayout(false);
 

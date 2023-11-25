@@ -38,6 +38,7 @@ namespace telacadastro
             }
 
             public Funcionario() { }
-        }
+
+    }
  
 }
